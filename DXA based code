@@ -51,6 +51,7 @@ def shortest_distance_from_point_to_segment(x,a, b):
         z = a + c*u # point
     
     return d,l,z
+    
 #function to fit circle to points 15-28 of the femoral head using a least squares method
 def fit_circle(points):
     head = points[15:29] # if using a different amount of points then these numbers should correspond to the points on which you want to fit your circle. NB Python omits the last number in a slice (:) so 15:29 is points 15 to 28 inclusive. 
@@ -60,6 +61,7 @@ def fit_circle(points):
     centre = np.squeeze(centre1)
                              
     return centre, r , s
+    
 # defining the femoral neck point (fnp) which is the mid point of the narrowest section of the femoral neck  
 def fem_neck_mid(points):
 #defining the femoral neck border points – lateral and medial
@@ -92,6 +94,7 @@ def fem_neck_mid(points):
     fnp = np.squeeze(fnp1)
 
     return fnp
+    
 #calculate distance from points to centre of best fit circle and the residual
 def residual_to_centre(centre, r, point):
     #distance to centre from that point = dtc
@@ -100,6 +103,7 @@ def residual_to_centre(centre, r, point):
     residual = dtc - r
     
     return dtc, residual 
+    
 #index point definition. calculate index point for cam calculation, index point is the first point of three to deviate from the circle by greater than maximum residual (res_max)
 def cam_index_point(centre, r, points):
     points_circle = list(range(15,29)) #points 15-28
@@ -213,8 +217,9 @@ def angle(a, centre, c):
     
     
     return angle_degrees
+    
 #calculate AA and export to csv
-pts_files = open('filelist.txt’, 'r+') #filelist.txt should be a list of all points files that are to be examined
+pts_files = open('example_list.txt’, 'r+') #example_list.txt should be a list of all points files that are to be examined
 f1 = open('output.csv','w') #output.csv will be the file where the results are deposited
 for pts_file in pts_files:
     print ("working on file: "+pts_file[:-1])
