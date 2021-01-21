@@ -1,0 +1,14 @@
+This information is to guide the use of the attached script. 
+
+1) you need to plot outline points to be used by these scripts. BoneFinder is freely available software to do this automatically or manually. 
+
+2) The output points need to provided in the format shown by example_points_file.txt. Each row after the "{" is an x,y coordinate for the points. The row after "{" will be read as point 0 by the code. 
+
+3) These points files need to be stored in the same folder
+
+4) A list of points files needs to be provided for the script - see example_list.txt
+
+5) If you have a different number of points to those described in [insert Wellcome paper]
+ then you will need to alter the circle fitting definitions.
+ 
+ 6) To use this code on Right Hips then the circle interception code needs to be altered unless the images have been flipped to appear like Left sided hips.
