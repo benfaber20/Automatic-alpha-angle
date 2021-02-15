@@ -1,6 +1,7 @@
 This information is to guide the use of the attached script. 
 
-1) Outline points are needed to use this script. BoneFinder is freely available software to do this automatically or manually (http://bone-finder.com). 
+1) Outline points are needed to use this script. BoneFinder is freely available software to do this automatically or manually (http://bone-finder.com). The model to 
+place the points automatically which was built on 1930 DXAs in UK Biobank is available there. 
 
 2) The outline points need to provided in the format shown by example_pointsfile.txt. Each row after the "{" is an x,y coordinate for the points. 
 The row after "{" will be read as point 0 by the code. The next row is point 1, the next row point 2 and so on and so forth until "}" ends the points file.  
