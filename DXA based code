@@ -1,3 +1,7 @@
+#This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation,
+#either version 3 of the License, or (at your option) any later version. You should have received a copy of the GNU General Public License along with this software. 
+#If not, please see https://www.gnu.org/licenses/licenses.html
+
 #import the packages needed
 
 import circle_fit as cf
@@ -202,6 +206,7 @@ def cam_intercept (points, index_point_no, centre, r):
     cam_intercept_point = np.squeeze(cam_intercept_point1)
 
     return cam_intercept_point
+    
 #deriving alpha angle from femoral neck point, best fit circle and index point (alpha - a=fnp, b centre, c= index point)
 
 def angle(a, centre, c):
